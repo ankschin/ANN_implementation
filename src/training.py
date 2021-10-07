@@ -1,6 +1,8 @@
+import imp
 from os import defpath
 from typing import DefaultDict
 from utils.common import read_config
+from utils.data_mgmt import get_data
 import argparse
 from pathlib import Path
 
@@ -8,7 +10,12 @@ from pathlib import Path
 
 def training(config_path):
     config= read_config(config_path)
-    print(config)
+    #print(config)
+
+    val_dataSize= config['params']['validation_size']
+    (X_train, y_train), (X_val, y_val), (X_test, y_test)= get_data(val_size=val_dataSize)
+
+
 
 if __name__=="__main__":
     args= argparse.ArgumentParser()

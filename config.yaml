@@ -4,7 +4,8 @@ params:
   batch_size: 32
   n_classes: 10
   metric: accuracy
-  optimizer: SGD 
+  optimizer: SGD
+  validation_size: 5000 
 
 artifacts:
   artifacts_dir: artifacts
