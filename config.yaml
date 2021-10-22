@@ -1,18 +1,21 @@
 params:
   test: testKeyword
-  epochs: 30
+  epochs: 1
   batch_size: 32
   n_classes: 10
   metric: accuracy
+  loss_function: sparse_categorical_crossentropy
   optimizer: SGD
   validation_size: 5000 
 
 artifacts:
   artifacts_dir: artifacts
-  model_dr: model
+  model_dir: model
   plots_dir: plots
   checkpoint_dir: checkpoints
+  model_name: model.h5
 
 logs:
   logs_dir: logs_dir
   general_logs: general_logs
+  tensorboard_logs: tensorboard_logs
